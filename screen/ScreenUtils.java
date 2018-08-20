@@ -1,4 +1,4 @@
-package com.example.user.screenutil;
+package com.example.user.screenutil.screen;
 
 import android.app.Application;
 import android.graphics.Rect;
@@ -7,6 +7,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.view.ViewTreeObserver;
 
+import com.example.user.screenutil.MyApplication;
+
 /**
  * Created by 52927 on 2018/3/9.
  * ScreenUtils
@@ -14,11 +16,11 @@ import android.view.ViewTreeObserver;
 public class ScreenUtils {
 
     public  static void activateScreenAdapt(Application context) {
-       // new ScreenAdaptHelper(context, 375).activate();
+        new ScreenAdaptHelper(context, 375).activate();
     }
 
     public static float pt2px(float px) {
-        //return ScreenAdaptHelper.pt2px(MyApplication.getInstance(), px);
+        //return ScreenAdaptHelper.pt2px(MyApplication.getApplication(),px);
         return 1;
     }
 
